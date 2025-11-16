@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -43,6 +42,7 @@
       gtk-sound-theme-name = "freedesktop";
       gtk-xft-dpi = 98304;
     };
+    
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = true;
       gtk-button-images = true;
@@ -57,7 +57,6 @@
       gtk-modules = "colorreload-gtk-module:window-decorations-gtk-module";
       gtk-toolbar-style = 3;
     };
-
   };
   # home.sessionVariables.GTK_THEME = "Tokyonight-Dark";
   home.sessionVariables.GTK_THEME = "adw-gtk3-dark";
