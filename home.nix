@@ -1,13 +1,20 @@
-{ config, pkgs, pkgs-unstable, inputs, ... }:
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  inputs,
+  ...
+}:
 
 {
   imports = [
-    ./app/helix/helix.nix  
+    ./app/helix/helix.nix
     ./app/yazi.nix
     ./app/rofi.nix
     ./app/dunst.nix
+    ./app/gtk.nix
   ];
-  
+
   home.username = "ligero";
   home.homeDirectory = "/home/ligero";
 
@@ -23,10 +30,10 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    
+
     # Dev
     go
-    
+
     pkgs-unstable.wiremix
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
