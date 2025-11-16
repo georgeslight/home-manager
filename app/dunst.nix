@@ -5,7 +5,7 @@
     enable = true;
     package = pkgs.dunst;
 
-    # Override configFile
+    # dunstrc
     settings = {
       global = {
         # Display & Monitor
@@ -117,8 +117,6 @@
       experimental = {
         per_monitor_dpi = false;
       };
-
     };
   };
-
 }
