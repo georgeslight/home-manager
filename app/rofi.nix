@@ -48,7 +48,7 @@ in
     };
   };
 
-  # Manually place the downloaded theme file
+  # places theme file into ./themes directory
   xdg.configFile."rofi/themes/tokyonight.rasi".source = tokyonightRofiTheme;
 
   home.packages = [ pkgs.rofimoji ];
