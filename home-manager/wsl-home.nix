@@ -8,6 +8,7 @@
 
 {
   imports = [
+    ./modules/zsh.nix
     ./modules/helix/helix.nix
     ./modules/yazi.nix
   ];

@@ -8,7 +8,7 @@
 
 {
   imports = [
-    ./modules/zsh/zsh.nix
+    ./modules/zsh.nix
     ./modules/helix/helix.nix
     ./modules/yazi.nix
     ./modules/rofi.nix
