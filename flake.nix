@@ -21,6 +21,7 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
+      nixos-wsl,
       ...
     }:
     let
