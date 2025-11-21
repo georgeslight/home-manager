@@ -14,11 +14,19 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, nixpkgs-unstable, home-manager, ... }:
+    inputs@{
+      nixpkgs,
+      nixpkgs-unstable,
+      home-manager,
+      ...
+    }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
     in
     {
       homeConfigurations."ligero" = home-manager.lib.homeManagerConfiguration {
@@ -29,7 +37,9 @@
         };
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules = [ ./home-manager/home.nix ];
+        modules = [
+          ./home-manager/home.nix
+        ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
