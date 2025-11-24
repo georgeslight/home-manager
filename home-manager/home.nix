@@ -14,6 +14,7 @@
     ./modules/rofi.nix
     ./modules/dunst.nix
     ./modules/gtk.nix
+    ./modules/crush.nix
     ./modules/hyprdynamicmonitors.nix
   ];
 
