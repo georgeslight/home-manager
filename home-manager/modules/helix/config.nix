@@ -31,7 +31,7 @@
         lsp.display-inlay-hints = true;
         line-number = "relative";
         cursorline = true;
-        mouse = false;
+        mouse = true;
         color-modes = true;
       };
 
