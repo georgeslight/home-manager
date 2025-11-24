@@ -36,6 +36,7 @@
       share = true; # Share command history between zsh sessions
       saveNoDups = true; # Do not write duplicate entries into the history file
       ignoreDups = true; # Do not enter command lines into the history list if they are duplicates of the previous event
+      expireDuplicatesFirst = true;
     };
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
