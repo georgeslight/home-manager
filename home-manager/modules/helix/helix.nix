@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   inputs,
   ...
 }:
@@ -50,5 +51,24 @@
     # Docker
     pkgs.docker-compose-language-service
     pkgs.dockerfile-language-server-nodejs
+
+    # TODO georges check scooter for project wide search
   ];
+
+  # # For Remap Caps-Lock to Esc
+  # services.keyd = {
+  #   enable = true;
+  #   package = pkgs.keyd;
+  #   keyboards.default = {
+  #     ids = [ "*" ];
+  #     settings = {
+  #       main = {
+  #         # Maps capslock to escape when pressed and control when held.
+  #         capslock = "overload(control, esc)";
+  #         # Remaps the escape key to capslock
+  #         esc = "capslock";
+  #       };
+  #     };
+  #   };
+  # };
 }

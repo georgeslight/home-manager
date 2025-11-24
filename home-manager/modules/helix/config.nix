@@ -5,14 +5,54 @@
     settings = {
       theme = "tokyonight";
 
+      editor = {
+        line-number = "relative";
+        cursorline = true;
+        mouse = true;
+        color-modes = true;
+
+        lsp = {
+          display-inlay-hints = true;
+          # auto-signature-help = false; # Testing
+          # display-messages = true; # Testing
+        };
+
+        cursor-shape = {
+          insert = "bar";
+          normal = "block";
+          select = "underline";
+        };
+
+        inline-diagnostics = {
+          cursor-line = "hint";
+        };
+
+        # Testing
+        # indent-guides = {
+        #   character = "|";
+        #   render = true;
+        # };
+
+        # Testing
+        # statusline = {
+        #   left = [
+        #     "mode"
+        #     "spinner"
+        #     "version-control"
+        #     "file-name"
+        #   ];
+        # };
+      };
+
       keys.normal = {
         # Lazygit
         "C-g" = [
+          ":write-all"
           ":new"
           ":insert-output lazygit"
           ":buffer-close!"
           ":redraw"
-          ":rla"
+          ":reload-all"
         ];
         # Yazi
         "C-y" = [
@@ -25,33 +65,17 @@
           ":set mouse true"
         ];
 
-      };
-
-      editor = {
-        lsp.display-inlay-hints = true;
-        line-number = "relative";
-        cursorline = true;
-        mouse = true;
-        color-modes = true;
-      };
-
-      editor.cursor-shape = {
-        insert = "bar";
-        normal = "block";
-        select = "underline";
-      };
-
-      editor.inline-diagnostics = {
-        cursor-line = "hint";
+        space = {
+          o = "file_picker_in_current_buffer_directory";
+        };
+        x = "select_line_below";
+        X = "select_line_above";
       };
 
       keys.insert = {
         j.k = "normal_mode";
       };
 
-      keys.normal.space = {
-        o = "file_picker_in_current_buffer_directory";
-      };
     };
   };
 }
