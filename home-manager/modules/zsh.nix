@@ -24,6 +24,7 @@
       bindkey '^[[1;5D' backward-word       # Ctrl+Left Arrow
       bindkey '^[[3;5~' kill-word           # Ctrl+Delete
       bindkey '^H' backward-kill-word       # Ctrl+Backspace
+      bindkey '^[[3~' backward-delete-char  # Backspace
     '';
 
     history = {
