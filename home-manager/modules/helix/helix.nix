@@ -51,6 +51,8 @@
     # Docker
     pkgs.docker-compose-language-service
     pkgs.dockerfile-language-server-nodejs
+    # SQL
+    pkgs.python313Packages.sqlparse
 
     # TODO georges check scooter for project wide search
   ];

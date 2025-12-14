@@ -28,6 +28,22 @@
           language-servers = [ "gopls" ];
           formatter.command = "goimports";  # The LSP formatter (gofmt) does not fix imports, goimports should be used instead
         }
+        {
+          name = "sql";
+          formatter = {
+            command = "sqlformat";
+            args = [
+              "--reindent"
+              "--indent_width"
+              "2"
+              "--keywords"
+              "upper"
+              "--identifiers"
+              "lower"
+              "-"
+            ];
+          };
+        }
       ];
     };
   };
